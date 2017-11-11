@@ -13,5 +13,5 @@ I also created a projects directory under c:\Users\%user%, and in that project d
 
 I use the IDLE editor that comes with Anaconda to work with python files.
 
-When I am ready to run a python script, I execute it in the python shell (see above for the environment):
-python my_python_script.py
+When I am ready to run a python script, I execute it in the python shell (see above for the environment):  
+**python my_python_script.py**
