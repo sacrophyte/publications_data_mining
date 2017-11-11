@@ -3,7 +3,7 @@
 At this point, I have only been asked to aggregate the number of publications per year over a five-year span for select faculty, and also to list each of those publications (two different requests, two different scripts). Uses the "Experts" University of Illinois portal for Elsevier Scopus via Pure 59 API calls.
 
 ## Quickstart
-(see Environment for initial configurations)
+(see publications_data_mining/install/README.md for initial configurations)
 1.  Get box.com API key from https://uofi.app.box.com/developers/console/app/416846/configuration
 1.  Save API key in your local app.cfg file (last line of three)
 1.  Verify that the box.com file you want to read from is correctly identified in **get_author_pubs_by_category.py**
