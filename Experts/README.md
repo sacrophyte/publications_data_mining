@@ -2,6 +2,20 @@
 
 At this point, I have only been asked to aggregate the number of publications per year over a five-year span for select faculty, and also to list each of those publications (two different requests, two different scripts). Uses the "Experts" University of Illinois portal for Elsevier Scopus via Pure 59 API calls.
 
+## Quickstart
+(see Environment for initial configurations)
+1.  Get box.com API key from https://uofi.app.box.com/developers/console/app/416846/configuration
+1.  Save API key in your local app.cfg file (last line of three)
+1.  Verify that the box.com file you want to read from is correctly identified in **get_author_pubs_by_category.py**
+1.  Start Anaconda
+1.  Navigate to 'scopus' project
+1.  Launch terminal
+1.  change directory to your project directory
+1.  python get_author_pubs_by_category.py
+1.  Output will be saved to author_pubs.csv
+1.  I like to tidy up the output (resize columns, etc) and save as Excel spreadsheet
+1.  Upload output to box.com
+
 ## Scripts
 **get_author_pubs_by_category.py**   
 Retrieves a list of faculty via a csv on box.com. Since the default API calls for the persons.research_outputs endpoint defaults the number of publications that are retrieved with no parameter avaialbe to "get all", I first issue a call to get the count of publications for each author, and then using the count I grab that number of publications for that author. As I am using the JSON interface, there are known bugs when Pure 59 returns data (usually related to XML) and I strip them out of the returned data. Additionally, I have not yet found an endpoint or API parameter that lets me format the generated output exactly the way I require, so I have to manipulate the data quite heavily once I receive it. The cleaned data is then stored in another CSV, which I manually upload to box.com for the rest of the team to consume.
