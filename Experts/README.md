@@ -3,7 +3,7 @@
 At this point, I have only been asked to aggregate the number of publications per year over a five-year span for select faculty, and also to list each of those publications (two different requests, two different scripts). Uses the "Experts" University of Illinois portal for Elsevier Scopus via Pure 59 API calls.
 
 ## Scripts
-*get_author_pubs_by_category.py*   
+**get_author_pubs_by_category.py**   
 Retrieves a list of faculty via a csv on box.com. Since the default API calls for the persons.research_outputs endpoint defaults the number of publications that are retrieved with no parameter avaialbe to "get all", I first issue a call to get the count of publications for each author, and then using the count I grab that number of publications for that author. As I am using the JSON interface, there are known bugs when Pure 59 returns data (usually related to XML) and I strip them out of the returned data. Additionally, I have not yet found an endpoint or API parameter that lets me format the generated output exactly the way I require, so I have to manipulate the data quite heavily once I receive it. The cleaned data is then stored in another CSV, which I manually upload to box.com for the rest of the team to consume.
 
 ### Current
